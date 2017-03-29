@@ -8,8 +8,14 @@ describe "Static pages" do
     end
     it "should have the right title" do
       visit '/static_pages/home'
-      expect(page).to have_title("#{base_title} | Home")
+      expect(page).to have_title(base_title)
     end
+
+    it "should not have a custom page title" do
+      visit '/static_pages/home'
+      expect(page).not_to have_title("| Home")
+    end
+
   end
   describe "Help page" do
     it "should have word 'Help'" do
