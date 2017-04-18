@@ -131,9 +131,11 @@
     <orderEntry type="library" scope="PROVIDED" name="diff-lcs (v1.3, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="erubis (v2.7.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="execjs (v2.7.0, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl (v4.8.0, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="factory_girl_rails (v4.8.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="ffi (v1.9.18, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="formatador (v0.2.5, ruby-2.2.6-p396) [gem]" level="application" />
-    <orderEntry type="library" scope="PROVIDED" name="globalid (v0.3.7, ruby-2.2.6-p396) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="globalid (v0.4.0, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard (v2.14.1, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-compat (v1.2.1, ruby-2.2.6-p396) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="guard-rspec (v4.7.3, ruby-2.2.6-p396) [gem]" level="application" />
