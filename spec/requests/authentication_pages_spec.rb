@@ -71,6 +71,14 @@ RSpec.describe "AuthenticationPages", type: :request do
           end
         end
 
+        describe "after resign in" do
+          let(:user1)  {FactoryGirl.create(:user)}
+          before { sign_in(user1) }
+          it "should render profile page" do
+            expect(page).to have_content(user1.name)
+          end
+        end
+
       end
       describe "in the Users controller" do
 
@@ -88,12 +96,28 @@ RSpec.describe "AuthenticationPages", type: :request do
           before { patch user_path(user) }
           specify { expect(response).to redirect_to(signin_path) }
         end
-
-
-
       end
 
+      describe "it isn't any 'profile' or 'settings' link" do
+        describe "visit root" do
+          before { visit root_path }
+          it {should_not have_link("Profile")}
+          it {should_not have_link("Settings")}
+        end
+      end
 
+      describe "in the Microposts controller" do
+
+        describe "submitting to the create action" do
+          before { post microposts_path }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+
+        describe "submitting to the destroy action" do
+          before { delete micropost_path(FactoryGirl.create(:micropost)) }
+          specify { expect(response).to redirect_to(signin_path) }
+        end
+      end
     end
     describe "as wrong user" do
       let(:user)  {FactoryGirl.create(:user)}

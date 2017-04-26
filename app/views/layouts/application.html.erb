@@ -20,6 +20,8 @@
     <%= yield %>
     <%= render 'layouts/footer' %>
     <%= debug(params) if Rails.env.development? %>
+    <br>
+    <%= debug(request.uuid) if Rails.env.development? %>
   </div>
 
   </body>
